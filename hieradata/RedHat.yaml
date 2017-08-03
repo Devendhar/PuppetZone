@@ -1,2 +1,5 @@
 ---
 apache1::servicename: httpd
+tomcat::package: tomcat
+#tomcat::username: "tomcat"
+#tomcat::pasword: "tomcat"

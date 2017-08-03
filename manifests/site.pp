@@ -30,7 +30,41 @@ File { backup => false }
   #   class { 'my_class': }
 #	include apache
 #}
+node default {
+
+}
 
 node pnode.example.com {
-	include role::webserver
+	#include role::webserver
+
+	#include java
+
+	#java::oracle { 'jdk8' :
+	#  ensure  => 'present',
+	#  version => '8',
+	#  java_se => 'jdk',
+	#}
+
+	#include role::tomcat
+	include elk::params
+	include elk::install
+	include elk::configure
+}
+
+node pnode2.example.com {
+	#include role::webserver
+
+	include java
+
+	java::oracle { 'jdk8' :
+	  ensure  => 'present',
+	  version => '8',
+	  java_se => 'jdk',
+	}
+
+	include role::tomcat
+}
+
+node devendhar.example.com {
+	include	pe_repo::platform::ubuntu_1404_amd64
 }
