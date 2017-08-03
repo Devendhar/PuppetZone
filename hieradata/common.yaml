@@ -1,3 +1,4 @@
 ---
 apache1::servicename: httpd
 elk::serverIP: 192.168.33.21
+elk::jvmMemOpt: 512m

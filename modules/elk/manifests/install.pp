@@ -2,7 +2,7 @@ class elk::install inherits elk::params{
 	
 	$packages.each |String $package| {
 	package { $package:
-#		provider => rpm,
+		provider => rpm,
 		ensure => present,
 		source => "/opt/${package}",
 	}

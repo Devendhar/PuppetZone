@@ -49,6 +49,7 @@ node pnode.example.com {
 	include elk::params
 	include elk::install
 	include elk::configure
+#	include elk::service
 }
 
 node pnode2.example.com {

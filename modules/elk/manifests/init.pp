@@ -47,4 +47,5 @@ class elk {
 	include elk::params
 	include elk::install
 	include elk::configure
+#	include elk::service
 }
